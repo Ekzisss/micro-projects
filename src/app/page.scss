@@ -1,0 +1,152 @@
+$text: #e7eee3;
+$background: #0c100a;
+$primary: #c0d8c2;
+$secondary: #13201b;
+$accent: #619e85;
+
+.info {
+  margin-top: 6vh;
+  text-align: center;
+  margin-bottom: 50px;
+
+  &__name {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  &__creator {
+    font-size: 20px;
+  }
+}
+
+.projects {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    height: 50px;
+    background-color: $primary;
+    color: $secondary;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+
+    transition: all 0.2s linear;
+  }
+
+  &__item:hover {
+    background-color: $secondary;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+
+  &__item:focus .animation {
+    display: block;
+  }
+}
+
+.project__name {
+  font-size: 20px;
+}
+
+.animation {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  display: none;
+
+  &__effect {
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    background-color: $primary;
+    border-radius: 2px;
+    z-index: -1;
+
+    &--1 {
+      top: 10%;
+      left: 2%;
+      rotate: 30deg;
+
+      animation-name: anim1;
+      animation-duration: 0.5s;
+    }
+
+    &--2 {
+      top: 50%;
+      left: 2%;
+
+      animation-name: anim1;
+      animation-duration: 0.5s;
+    }
+
+    &--3 {
+      top: 90%;
+      left: 2%;
+      rotate: -30deg;
+
+      animation-name: anim1;
+      animation-duration: 0.5s;
+    }
+
+    &--4 {
+      top: 10%;
+      right: 2%;
+      rotate: -30deg;
+
+      animation-name: anim2;
+      animation-duration: 0.5s;
+    }
+
+    &--5 {
+      top: 50%;
+      right: 2%;
+
+      animation-name: anim2;
+      animation-duration: 0.5s;
+    }
+
+    &--6 {
+      top: 90%;
+      right: 2%;
+      rotate: 30deg;
+
+      animation-name: anim2;
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+/*–––––––––––––––animations–––––––––––––––*/
+
+@keyframes anim1 {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+    display: none;
+  }
+  to {
+    transform: translate(-40px, 0);
+    opacity: 0;
+    display: block;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(40px, 0);
+    opacity: 0;
+  }
+}
