@@ -1,0 +1,85 @@
+:root {
+  --background: #0c100a;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.color-flipper {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    &__flip {
+      font-size: 30px;
+    }
+  }
+
+  &__name {
+    font-size: 50px;
+    position: absolute;
+    top: 15%;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__choice {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    &__choice-btn_active {
+      text-decoration: underline;
+    }
+
+    &__current-color {
+      background-color: black;
+      border-radius: 4px;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    &__flip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+      padding: 10px 20px;
+      background-color: transparent;
+      color: white;
+      border-radius: 10px;
+      border: 2px solid black;
+      cursor: pointer;
+      position: relative;
+
+      transition: all 0.2s linear;
+
+      &:hover {
+        // background-color: $secondary;
+        // border: 1px solid $primary;
+        // color: $primary;
+      }
+    }
+  }
+
+  &__color {
+    background-color: white;
+    border-radius: 3px;
+    padding: 2px 3px;
+  }
+}
+
+.color {
+  background-color: white;
+  border-radius: 3px;
+  padding: 2px 3px;
+}

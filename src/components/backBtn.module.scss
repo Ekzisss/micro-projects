@@ -1,0 +1,43 @@
+$primary: #c0d8c2;
+
+.backBtn {
+  position: absolute;
+  content: "<";
+  top: 5rem;
+  left: 5rem;
+  padding: 5px 10px;
+
+  border-radius: 50%;
+  border: 2px $primary solid;
+  color: $primary;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px $primary solid;
+    transform-origin: center;
+    transform: scale(4);
+
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    transform: translate(-40px, 0);
+    opacity: 0;
+    transform: scale(4);
+  }
+}

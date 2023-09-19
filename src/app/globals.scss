@@ -37,6 +37,8 @@ input::-ms-clear {
 }
 button {
   cursor: pointer;
+  color: inherit;
+  font-size: inherit;
   background-color: transparent;
 }
 button::-moz-focus-inner {
@@ -83,5 +85,5 @@ body {
   font-family: "Montserrat";
   font-size: 20px;
   background-color: $background;
-  color: $text;
+  color: $primary;
 }
