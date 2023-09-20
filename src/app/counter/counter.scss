@@ -1,0 +1,18 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__btns {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__number {
+    font-size: 70px;
+    color: #619e85;
+  }
+}

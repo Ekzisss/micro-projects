@@ -1,0 +1,19 @@
+@import "../app/vars.module.scss";
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid $accent;
+
+  transition: letter-spacing 0.2s linear;
+
+  &:hover {
+    letter-spacing: 1px;
+  }
+
+  &:active {
+    border: 2px solid $background;
+    background-color: $accent;
+    color: $background;
+  }
+}

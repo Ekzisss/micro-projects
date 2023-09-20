@@ -70,11 +70,7 @@ h6 {
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
 
-$text: #e7eee3;
-$background: #0c100a;
-$primary: #c0d8c2;
-$secondary: #13201b;
-$accent: #619e85;
+@import "./vars.module.scss";
 
 main {
   max-width: 1200px;
@@ -86,4 +82,12 @@ body {
   font-size: 20px;
   background-color: $background;
   color: $primary;
+}
+
+.proj__name {
+  font-size: 50px;
+  position: absolute;
+  top: 15%;
+  text-align: center;
+  width: 100%;
 }

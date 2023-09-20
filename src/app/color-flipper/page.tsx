@@ -2,10 +2,11 @@
 import { useState } from 'react';
 import './page.scss';
 import BackBtn from '@/components/backBtn';
+import vars from '../vars.module.scss';
 
 export default function ColorFlipper() {
   const [mode, setMode] = useState(false);
-  const [color, setColor] = useState('#0c100a');
+  const [color, setColor] = useState(vars.background);
 
   function colorFlip() {
     if (!mode) {
@@ -23,6 +24,7 @@ export default function ColorFlipper() {
         }`
       );
     }
+    document.documentElement?.style.setProperty('--background', 'red');
   }
 
   return (
@@ -30,7 +32,7 @@ export default function ColorFlipper() {
       className="color-flipper__body"
       style={{ background: color }}
     >
-      <h1 className="color-flipper__name">Color flipper</h1>
+      <h1 className="proj__name">Color flipper</h1>
       <div className="color-flipper__main">
         <div className="color-flipper__main__choice">
           <button

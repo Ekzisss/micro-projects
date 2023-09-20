@@ -1,10 +1,4 @@
-:root {
-  --background: #0c100a;
-}
-
-body {
-  background-color: var(--background);
-}
+@import "../vars.module.scss";
 
 .color-flipper {
   &__body {
@@ -19,12 +13,6 @@ body {
     }
   }
 
-  &__name {
-    font-size: 50px;
-    position: absolute;
-    top: 15%;
-  }
-
   &__main {
     display: flex;
     flex-direction: column;
@@ -34,6 +22,7 @@ body {
       display: flex;
       gap: 10px;
       justify-content: center;
+      background-color: $background;
     }
 
     &__choice-btn_active {

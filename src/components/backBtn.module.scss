@@ -1,4 +1,4 @@
-$primary: #c0d8c2;
+@import "../app/vars.module.scss";
 
 .backBtn {
   position: absolute;
@@ -40,4 +40,8 @@ $primary: #c0d8c2;
     opacity: 0;
     transform: scale(4);
   }
+}
+
+.btn {
+  background-color: red;
 }
