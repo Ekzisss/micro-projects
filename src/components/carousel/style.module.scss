@@ -1,0 +1,73 @@
+@import "../../app/vars.module.scss";
+
+.frame {
+  width: 500px;
+  min-height: 300px;
+  border: 2px solid rgb(234, 234, 234);
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.carusel {
+  display: flex;
+  width: 2000px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.item {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.text {
+  font-size: 16px;
+  text-align: center;
+}
+
+.name {
+  font-size: 26px;
+}
+
+.profession {
+  color: $accent;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.back {
+  border: 1px solid $primary;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.forward {
+  transform: scaleX(-1);
+  border: 1px solid $primary;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

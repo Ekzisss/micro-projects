@@ -11,11 +11,15 @@ export default function Home() {
       <div className="projects">
         <ProjLink
           href="color-flipper"
-          content="Color Flipper"
+          content="Color flipper"
         />
         <ProjLink
           href="counter"
           content="Counter"
+        />
+        <ProjLink
+          href="review-carousel"
+          content="Review carousel"
         />
       </div>
     </main>

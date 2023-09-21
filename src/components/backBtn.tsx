@@ -1,8 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
+import styles from './backBtn.module.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import styles from './backBtn.module.scss';
 
 export default function BackBtn() {
   return (
@@ -10,7 +10,10 @@ export default function BackBtn() {
       href="/"
       className={styles.backBtn}
     >
-      <FontAwesomeIcon icon={faAngleLeft} />
+      <FontAwesomeIcon
+        style={{ width: '12.5px' }}
+        icon={faAngleLeft}
+      />
     </Link>
   );
 }
