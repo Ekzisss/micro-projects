@@ -21,6 +21,10 @@ export default function Home() {
           href="review-carousel"
           content="Review carousel"
         />
+        <ProjLink
+          href="navbar-slider"
+          content="Navbar & slider"
+        />
       </div>
     </main>
   );

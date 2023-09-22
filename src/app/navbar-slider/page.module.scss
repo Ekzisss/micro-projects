@@ -1,0 +1,129 @@
+@import "../vars.module.scss";
+
+.origin {
+  display: flex;
+  flex-basis: auto;
+}
+
+.main {
+  width: 100%;
+  margin: 0;
+
+  max-width: none !important;
+}
+
+.header {
+  background-color: rgb(242, 242, 242);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger {
+  position: relative;
+  height: 4px;
+  width: 24px;
+  background-color: $background;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background-color: $background;
+    border-radius: 2px;
+  }
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    background-color: $background;
+    border-radius: 2px;
+  }
+}
+
+.nav {
+  background-color: $primary;
+  color: $background;
+  font-size: 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 20px;
+
+  width: 25%;
+  height: 100vh;
+  position: relative;
+
+  &__item {
+    cursor: pointer;
+    &:hover {
+      // filter: grayscale(80%);
+      color: rgb(187, 0, 0);
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin-top: 45vh;
+  font-size: 50px;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  &__img {
+    position: relative;
+
+    &::after {
+      background-color: red;
+      width: 20px;
+      height: 3px;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: center;
+      rotate: 45deg;
+    }
+
+    &::before {
+      background-color: red;
+      width: 20px;
+      height: 3px;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: center;
+      rotate: -45deg;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
