@@ -1,0 +1,35 @@
+@import "../../app/vars.module.scss";
+
+.main {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+}
+
+.window {
+  background-color: rgb(238, 238, 238);
+  color: $background;
+  opacity: 1;
+  width: 400px;
+  z-index: 1;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 30px;
+}

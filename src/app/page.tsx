@@ -25,6 +25,10 @@ export default function Home() {
           href="navbar-slider"
           content="Navbar & slider"
         />
+        <ProjLink
+          href="modal-window"
+          content="Modal window"
+        />
       </div>
     </main>
   );
