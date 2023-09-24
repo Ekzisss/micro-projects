@@ -1,7 +1,6 @@
 'use client';
 import Btn from '@/components/btn';
 import Modal from '@/components/modal';
-import BackBtn from '@/components/backBtn';
 import { useState } from 'react';
 
 export default function ModalWindow() {
@@ -15,7 +14,6 @@ export default function ModalWindow() {
         content="Show modal"
       ></Btn>
       {show ? <Modal setShow={setShow}></Modal> : ''}
-      <BackBtn></BackBtn>
     </main>
   );
 }

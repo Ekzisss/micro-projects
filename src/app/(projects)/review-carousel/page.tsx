@@ -31,7 +31,6 @@ export default function ReviewCarousel() {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <Carousel info={info}></Carousel>
       </div>
-      <BackBtn></BackBtn>
     </main>
   );
 }

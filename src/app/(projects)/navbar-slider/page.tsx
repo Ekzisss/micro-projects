@@ -1,7 +1,6 @@
 'use client';
 import style from './page.module.scss';
 import { useState } from 'react';
-import BackBtn from '@/components/backBtn';
 
 export default function NavbarSlider() {
   const [showNav, setShowNav] = useState(false);
@@ -39,7 +38,6 @@ export default function NavbarSlider() {
           navbar for mobile, slider for desktop
         </h3>
       </main>
-      <BackBtn></BackBtn>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 'use client';
 import { useState } from 'react';
 import './page.scss';
-import BackBtn from '@/components/backBtn';
-import vars from '../vars.module.scss';
+import vars from '../../vars.module.scss';
 
 export default function ColorFlipper() {
   const [mode, setMode] = useState(false);
@@ -64,7 +63,6 @@ export default function ColorFlipper() {
           click me
         </button>
       </div>
-      <BackBtn></BackBtn>
     </div>
   );
 }

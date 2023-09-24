@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import './counter.scss';
 import Btn from '@/components/btn';
-import BackBtn from '@/components/backBtn';
 
 export default function Counter() {
   const [counter, setcounter] = useState(0);
@@ -27,7 +26,6 @@ export default function Counter() {
           ></Btn>
         </div>
       </div>
-      <BackBtn></BackBtn>
     </main>
   );
 }

@@ -29,6 +29,10 @@ export default function Home() {
           href="modal-window"
           content="Modal window"
         />
+        <ProjLink
+          href="faq-page"
+          content="Faq Page"
+        />
       </div>
     </main>
   );
