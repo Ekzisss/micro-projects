@@ -1,0 +1,51 @@
+@import "../../vars.module.scss";
+
+.main {
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    gap: 10px;
+    width: 450px;
+  }
+
+  &__img {
+    border: 2px $accent solid;
+    border-radius: 10px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__top {
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding-bottom: 5px;
+
+    border-bottom: 2px $accent solid;
+  }
+
+  &__price {
+    color: $accent;
+  }
+}

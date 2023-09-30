@@ -33,6 +33,10 @@ export default function Home() {
           href="faq-page"
           content="Faq Page"
         />
+        <ProjLink
+          href="restaurant-menu"
+          content="Restaurant menu"
+        />
       </div>
     </main>
   );

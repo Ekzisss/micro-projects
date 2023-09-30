@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Carousel from '@/components/carousel';
-import BackBtn from '@/components/backBtn';
 
 export default function ReviewCarousel() {
   const info = [
