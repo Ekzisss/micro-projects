@@ -10,6 +10,17 @@
   margin: auto;
 }
 
+.tagsField {
+  display: flex;
+  gap: 10px;
+}
+
+// .tag {
+//   border: 1px $accent solid;
+//   border-radius: 5px;
+//   padding: 5px 10px;
+// }
+
 .menu {
   display: flex;
   gap: 30px;

@@ -1,8 +1,13 @@
+'use client';
 import React from 'react';
 import style from './style.module.scss';
 import Image from 'next/image';
+import Btn from '@/components/btn';
+import { useState } from 'react';
 
 export default function Menu() {
+  const [currentCat, setCurrentCat] = useState('');
+
   const menu = [
     {
       id: 1,
@@ -86,33 +91,53 @@ export default function Menu() {
     },
   ];
 
+  const tags = [...new Set(menu.map((item) => item.category))];
+
   return (
     <main className={style.main}>
       <h1 className="proj__name2">Restaurant menu</h1>
-      <div className={style.menu}>
-        {menu.map((item) => (
-          <div
-            key={item.id}
-            className={style.menu__item}
-          >
-            <div className={style.menu__left}>
-              <Image
-                className={style.menu__img}
-                alt="avatar"
-                src={item.img}
-                width={150}
-                height={100}
-              ></Image>
-            </div>
-            <div className={style.menu__right}>
-              <div className={style.menu__top}>
-                <h2 className={style.menu__name}>{item.title}</h2>
-                <span className={style.menu__price}> {`${item.price}$`}</span>
-              </div>
-              <p className={style.menu__desc}>{item.desc}</p>
-            </div>
-          </div>
+      <li className={style.tagsField}>
+        {tags.map((item, index) => (
+          <Btn
+            key={index}
+            content={item}
+            onClick={() => setCurrentCat(item)}
+          ></Btn>
         ))}
+        <Btn
+          content="Reset"
+          onClick={() => setCurrentCat('')}
+          style={{ color: 'red' }}
+        ></Btn>
+      </li>
+      <div className={style.menu}>
+        {menu.map((item) =>
+          item.category == currentCat || currentCat == '' ? (
+            <div
+              key={item.id}
+              className={style.menu__item}
+            >
+              <div className={style.menu__left}>
+                <Image
+                  className={style.menu__img}
+                  alt="avatar"
+                  src={item.img}
+                  width={150}
+                  height={100}
+                ></Image>
+              </div>
+              <div className={style.menu__right}>
+                <div className={style.menu__top}>
+                  <h2 className={style.menu__name}>{item.title}</h2>
+                  <span className={style.menu__price}> {`${item.price}$`}</span>
+                </div>
+                <p className={style.menu__desc}>{item.desc}</p>
+              </div>
+            </div>
+          ) : (
+            ''
+          )
+        )}
       </div>
     </main>
   );
