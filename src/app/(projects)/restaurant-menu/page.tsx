@@ -96,7 +96,7 @@ export default function Menu() {
   return (
     <main className={style.main}>
       <h1 className="proj__name2">Restaurant menu</h1>
-      <li className={style.tagsField}>
+      <ul className={style.tagsField}>
         {tags.map((item, index) => (
           <Btn
             key={index}
@@ -109,7 +109,7 @@ export default function Menu() {
           onClick={() => setCurrentCat('')}
           style={{ color: 'red' }}
         ></Btn>
-      </li>
+      </ul>
       <div className={style.menu}>
         {menu.map((item) =>
           item.category == currentCat || currentCat == '' ? (

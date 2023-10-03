@@ -64,6 +64,7 @@
   width: 25%;
   height: 100vh;
   position: relative;
+  z-index: 2;
 
   &__item {
     cursor: pointer;
