@@ -3,11 +3,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import style from './projLink.module.scss';
 
-export default function ProjLink({ content, href }: { content: string; href: string }) {
+export default function ProjLink({
+  content,
+  href,
+  rel = '',
+}: {
+  content: string;
+  href: string;
+  rel?: string;
+}) {
   return (
     <Link
       className={style.project}
       href={href}
+      rel={rel}
     >
       <div className={style.project__name}>{content}</div>
       <div className={style.animation}>

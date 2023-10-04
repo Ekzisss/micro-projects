@@ -1,7 +1,15 @@
 import './page.scss';
 import ProjLink from '@/components/projLink';
+import fs from 'fs/promises';
 
-export default function Home() {
+export default async function Home() {
+  let links: string[] = [];
+  await fs.readdir('./src/app/(projects)').then((files) =>
+    files.forEach((file) => {
+      file != 'layout.tsx' ? links.push(file) : '';
+    })
+  );
+
   return (
     <main className="main">
       <div className="info">
@@ -9,34 +17,13 @@ export default function Home() {
         <h2 className="info__creator">by Ekzis</h2>
       </div>
       <div className="projects">
-        <ProjLink
-          href="color-flipper"
-          content="Color flipper"
-        />
-        <ProjLink
-          href="counter"
-          content="Counter"
-        />
-        <ProjLink
-          href="review-carousel"
-          content="Review carousel"
-        />
-        <ProjLink
-          href="navbar-slider"
-          content="Navbar & slider"
-        />
-        <ProjLink
-          href="modal-window"
-          content="Modal window"
-        />
-        <ProjLink
-          href="faq-page"
-          content="Faq Page"
-        />
-        <ProjLink
-          href="restaurant-menu"
-          content="Restaurant menu"
-        />
+        {links.map((item, index) => (
+          <ProjLink
+            key={index}
+            href={item}
+            content={item.replace('-', ' ')}
+          />
+        ))}
       </div>
     </main>
   );

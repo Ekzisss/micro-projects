@@ -1,6 +1,5 @@
 import './globals.scss';
 import type { Metadata } from 'next';
-import BackBtn from '@/components/backBtn';
 
 export const metadata: Metadata = {
   title: 'Micro-projects',

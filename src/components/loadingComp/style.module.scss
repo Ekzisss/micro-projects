@@ -1,0 +1,68 @@
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load {
+  position: relative;
+  transform-origin: center;
+  animation: rotate 2s linear;
+}
+
+.cirlce {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(236, 236, 236);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &1 {
+    top: 15px;
+  }
+
+  &2 {
+    top: -15px;
+  }
+
+  &3 {
+    left: 15px;
+  }
+
+  &4 {
+    left: -15px;
+  }
+
+  &5 {
+    top: 10px;
+    left: 10px;
+  }
+
+  &6 {
+    top: 10px;
+    left: -10px;
+  }
+
+  &7 {
+    top: -10px;
+    left: 10px;
+  }
+
+  &8 {
+    top: -10px;
+    left: -10px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
