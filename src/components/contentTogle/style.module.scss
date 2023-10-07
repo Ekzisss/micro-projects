@@ -1,0 +1,70 @@
+// @import url(../../vars.module.scss);
+@import "../../app/vars.module.scss";
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  color: $background;
+  word-break: break-all;
+  margin: auto;
+}
+
+.img {
+  border: 2px solid $primary;
+  border-radius: 20px;
+
+  // transition: 0.1s all linear;
+}
+
+.leftSide {
+  // background-color: white;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex-grow: 1;
+}
+
+.tabs {
+  // display: flex;
+  // justify-content: space-between;
+  // gap: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+
+  &__item {
+    flex-grow: 1;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+    background-color: rgb(233, 233, 233);
+    opacity: 0.5;
+
+    cursor: pointer;
+
+    &_active {
+      opacity: 1;
+      border: 2px solid $accent;
+      border-bottom: none;
+    }
+  }
+}
+
+.content {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: rgb(233, 233, 233);
+  border: 2px solid $accent;
+
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
