@@ -32,14 +32,12 @@ export default function ContentToggle({
     >
       <div className={style.leftSide}>
         <Image
-          // fill
           width={imgWeight}
           height={height}
-          // sizes="10vw"
-          // layout="full"
           alt="image"
           src={content[tab].img}
           className={style.img}
+          priority
         ></Image>
       </div>
       <div className={style.rightSide}>

@@ -124,6 +124,7 @@ export default function Menu() {
                   src={item.img}
                   width={150}
                   height={100}
+                  priority
                 ></Image>
               </div>
               <div className={style.menu__right}>

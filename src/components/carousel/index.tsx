@@ -63,6 +63,7 @@ export default function Carousel({
               src={item.img}
               width={100}
               height={100}
+              priority
             ></Image>
             <h2 className={style.name}>{item.name}</h2>
             <h2 className={style.profession}>{item.profession}</h2>

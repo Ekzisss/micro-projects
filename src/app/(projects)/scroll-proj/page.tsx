@@ -1,7 +1,5 @@
-'use client';
 import React from 'react';
 import style from './style.module.scss';
-import { useEffect, useState } from 'react';
 
 export default function ScrollProj() {
   return (
