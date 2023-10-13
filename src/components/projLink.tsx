@@ -16,7 +16,7 @@ export default function ProjLink({
     <Link
       className={style.project}
       href={href}
-      rel={rel}
+      rel="preload"
     >
       <div className={style.project__name}>{content}</div>
       <div className={style.animation}>
